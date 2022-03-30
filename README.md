@@ -22,3 +22,9 @@ kubectl apply -f https://raw.githubusercontent.com/JeremyTigera/Kubernetes-Secur
 
 **INSERT SCREENSHOT**
 
+## Block bad IP
+
+Add ip threat feed in calico
+```
+kubectl apply -f https://raw.githubusercontent.com/JeremyTigera/Kubernetes-Security-Workshop/main/IPS-feed/threat-feed.yaml
+```
