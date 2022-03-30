@@ -29,12 +29,13 @@ Add ip threat feed in calico
 kubectl apply -f https://raw.githubusercontent.com/JeremyTigera/Kubernetes-Security-Workshop/main/IPS-feed/threat-feed.yaml
 ```
 
-## Secure nodes by adding label to make then endpoint
+## Secure nodes
 
-## Securing EKS hosts:
+### by adding label to make then endpoint
 
 Automatically register your nodes as Host Endpoints (HEPS). To enable automatic host endpoints, edit the default KubeControllersConfiguration instance, and set ``` spec.controllers.node.hostEndpoint.autoCreate```  to ```true``` for those ```HostEndpoints``` :
 
 ```
 kubectl patch kubecontrollersconfiguration default --patch='{"spec": {"controllers": {"node": {"hostEndpoint": {"autoCreate": "Enabled"}}}}}'
 ```
+### secure nodes with policies
