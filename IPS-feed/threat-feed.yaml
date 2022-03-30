@@ -1,0 +1,13 @@
+# This creates a network set in calico entraprise that is fed by the ip addresses in the malicious-ip.yaml 
+apiVersion: projectcalico.org/v3
+kind: GlobalThreatFeed
+metadata:
+  name: malware-ip-feed
+spec:
+  pull:
+    http:
+      url: https://raw.githubusercontent.com/JeremyTigera/Kubernetes-Security-Workshop/main/IPS-feed/malicious-ip.yaml
+  globalNetworkSet:
+    labels:
+      ipfeed: known-malicious-malware
+      
