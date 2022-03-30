@@ -1,0 +1,7 @@
+# This is a manifest to create a tier called app-tier
+apiVersion: projectcalico.org/v3
+kind: Tier
+metadata:
+  name: app-tier
+spec:
+  order: 600
